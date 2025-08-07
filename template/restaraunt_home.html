@@ -7,16 +7,26 @@
   <title>{{ restaurant_name }}</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.fontspace.com/barrbar-font-f76050">
   <style>
     body {
       font-family: 'Inter', sans-serif;
+    }
+    @font-face{
+    font-family:'Barrbar'
+    src:url('{% static 'fonts/Barrbar.otf' %}') format('truetype');
+    font-weight : normal;
+    font-style : notmal;
+    }
+    .logo{
+    font-family:'Barrbar','sans-serif';
     }
   </style>
 </head>
 <body class="bg-gradient-to-tr from-gray-900 to-black text-white min-h-screen flex items-center justify-center">
 
   <div class="text-center px-4 py-8 max-w-2xl">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-yellow-400 drop-shadow-md">
+    <h1 class="logo text-4xl md:text-5xl font-bold mb-6 text-yellow-400 drop-shadow-md">
       {{ restaraunt_name }}
     </h1>
 
