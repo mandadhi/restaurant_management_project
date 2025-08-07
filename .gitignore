@@ -1,0 +1,59 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# Migrations (optional – see note below)
+# */migrations/*.py
+# */migrations/__pycache__/
+
+# Environment variables and secrets
+.env
+.env.*
+secrets.json
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE settings
+.vscode/
+.idea/
+
+# Pytest and testing
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Node modules (if using React/Vite frontend)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Systemd or gunicorn files
+*.sock
+*.pid
