@@ -1,55 +1,65 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ restaurant_name }}</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.fontspace.com/barrbar-font-f76050">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    @font-face{
-    font-family:'Barrbar'
-    src:url('{% static 'fonts/Barrbar.otf' %}') format('truetype');
-    font-weight : normal;
-    font-style : notmal;
-    }
-    .logo{
-    font-family:'Barrbar','sans-serif';
-    }
-  </style>
-</head>
-<nav class="flex gap-6 m-2 px-4 py-2 w-full absolute justify-end top-0 right-0 text-gray-300 font-semibold">
-    <a href="#cart" title="cart">Cart</a>
-    <a href="#login" title="login">Login</a>
-    <a href="{% url 'about' %}" title="about">About us</a>
-    <a href="{% url 'contact' %}" title="contact">Contact us</a>
-</nav>
-<body class="bg-gradient-to-tr from-gray-900 to-black text-white min-h-screen flex items-center justify-center">
-
-  <div class="text-center px-4 py-8 max-w-2xl">
-    <h1 class="logo text-4xl md:text-5xl font-bold mb-6 text-yellow-400 drop-shadow-md">
-      {{ restaraunt_name }}<span class="ml-2 text-sm">{{restaraunt_number}}</span>
-    </h1>
-
-    <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-      Welcome to <span class="text-white font-semibold">{{ restaraunt_name }}</span>, where your tastebuds explore an unforgettable culinary adventure.
-    </p>
-
-    <div class="flex flex-wrap justify-center gap-4 mb-8">
-      <img class="rounded-full w-28 h-28 object-cover shadow-md hover:scale-105 transition duration-300" src="{% static 'images/noodels.jpeg' %}" alt="noodles">
-      <img class="rounded-full w-28 h-28 object-cover shadow-md hover:scale-105 transition duration-300" src="{% static 'images/noodels.jpeg' %}" alt="noodles">
-      <img class="rounded-full w-28 h-28 object-cover shadow-md hover:scale-105 transition duration-300" src="{% static 'images/noodels.jpeg' %}" alt="noodles">
-    </div>
-
-    <a href="#menusection" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-yellow-300 transition duration-300">
-      View Menu
-    </a>
-  </div>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ restaurant_name }}</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.fontspace.com/barrbar-font-f76050">
+        <link rel="stylesheet" href="https://www.fontspace.com/goldrops-font-f91751">
+        <style>
+            body {
+            font-family: 'Inter', sans-serif;
+            }
+            @font-face {
+            font-family: 'Barrbar';
+            src: url("{% static 'fonts/Barrbar.otf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'goldrops';
+            src: url("{% static 'fonts/Goldrops.otf' %}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+            
+            .font-logo {
+            font-family: 'Barrbar', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-gradient-to-tr from-gray-900 to-black">
+        <!--navbar-->
+        <nav class="flex gap-6 m-2 px-4 py-2 w-full fixed justify-end top-0 right-0 text-gray-300 font-semibold bg-black bg-opacity-60 backdrop-blur-md rounded-b-md z-10">
+            <a href="#cart" title="cart" class="hover:text-yellow-400 transition-colors">Cart</a>
+            <a href="#login" title="login" class="hover:text-yellow-400 transition-colors">Login</a>
+            <a href="{% url 'about' %}" title="about" class="hover:text-yellow-400 transition-colors">About us</a>
+            <a href="{% url 'contact' %}" title="contact" class="hover:text-yellow-400 transition-colors">Contact us</a>
+        </nav>
+        <div  class="bg-gradient-to-tr from-gray-900 to-black text-white min-h-screen flex items-center justify-center">
+            <div class="text-center px-4 py-8 max-w-2xl">
+                <h1 class="font-logo text-4xl md:text-5xl font-bold mb-6 text-yellow-400 drop-shadow-md">
+                    {{ restaraunt_name }}<span class=" text-sm ml-2 ">{{restaraunt_number}}</span>
+                </h1>
+                    
+                <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                    Welcome to <span class="text-white font-semibold">{{ restaraunt_name }}</span>, where your tastebuds explore an unforgettable culinary adventure.
+                </p>
+                        
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <img class="rounded-full w-28 h-28 object-cover shadow-md hover:scale-105 transition duration-300" src="{% static 'images/noodels.jpeg' %}" alt="noodles">
+                    <img class="rounded-full w-28 h-28 object-cover shadow-md hover:scale-105 transition duration-300" src="{% static 'images/noodels.jpeg' %}" alt="noodles">
+                    <img class="rounded-full w-28 h-28 object-cover shadow-md hover:scale-105 transition duration-300" src="{% static 'images/noodels.jpeg' %}" alt="noodles">
+                </div>
+                
+                <a href="{% url 'product-list' %}" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-yellow-300 transition duration-300">
+                    View Menu
+                </a>
+            </div>
+        </div>
+    </body>
 </html>
