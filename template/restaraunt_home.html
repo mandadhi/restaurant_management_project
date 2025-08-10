@@ -20,13 +20,6 @@
             font-weight: normal;
             font-style: normal;
             }
-            @font-face {
-            font-family: 'goldrops';
-            src: url("{% static 'fonts/Goldrops.otf' %}") format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            }
-            
             .font-logo {
             font-family: 'Barrbar', sans-serif;
             }
@@ -40,7 +33,7 @@
             <a href="{% url 'about' %}" title="about" class="hover:text-yellow-400 transition-colors">About us</a>
             <a href="{% url 'contact' %}" title="contact" class="hover:text-yellow-400 transition-colors">Contact us</a>
         </nav>
-        <div  class="bg-gradient-to-tr from-gray-900 to-black text-white min-h-screen flex items-center justify-center">
+        <div  class="text-white min-h-screen flex items-center justify-center">
             <div class="text-center px-4 py-8 max-w-2xl">
                 <h1 class="font-logo text-4xl md:text-5xl font-bold mb-6 text-yellow-400 drop-shadow-md">
                     {{ restaraunt_name }}<span class=" text-sm ml-2 ">{{restaraunt_number}}</span>
