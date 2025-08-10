@@ -6,5 +6,6 @@ from .views import custom_404
 handler404=custom_404
 urlpatterns = [
     path('home',views.home),
+    path('about',views.about,name='about'),
     
 ]
